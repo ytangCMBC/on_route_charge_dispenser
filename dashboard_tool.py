@@ -241,6 +241,7 @@ fig_slot_stack.update_layout(
     yaxis_title="Number of buses",
     legend_title="Status",
     height=420,
+    width=1000,
     margin=dict(l=10, r=10, t=10, b=10)
 )
 fig_slot_stack.update_xaxes(tickangle=-45, nticks=18)
