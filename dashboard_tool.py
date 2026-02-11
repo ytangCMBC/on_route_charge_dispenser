@@ -241,12 +241,11 @@ fig_slot_stack.update_layout(
     yaxis_title="Number of buses",
     legend_title="Status",
     height=420,
-    width=1000,
     margin=dict(l=10, r=10, t=10, b=10)
 )
 fig_slot_stack.update_xaxes(tickangle=-45, nticks=18)
 
-st.plotly_chart(fig_slot_stack, width='content')
+st.plotly_chart(fig_slot_stack, width="stretch")
 
 
 # -----------------------
@@ -351,25 +350,25 @@ else:
         if df_total_f.empty:
             st.caption("No entries for total at this minute (after filter).")
         else:
-            st.dataframe(df_total_f.sort_values("n", ascending=False), width=1000, height=400)
+            st.dataframe(df_total_f.sort_values("n", ascending=False), width="stretch", height=400)
 
     with tab_drop:
         if df_drop_f.empty:
             st.caption("No entries for this status at this minute (after filter).")
         else:
-            st.dataframe(df_drop_f.sort_values("n", ascending=False), width=1000, height=400)
+            st.dataframe(df_drop_f.sort_values("n", ascending=False), width="stretch", height=400)
 
     with tab_rec:
         if df_rec_f.empty:
             st.caption("No entries for this status at this minute (after filter).")
         else:
-            st.dataframe(df_rec_f.sort_values("n", ascending=False), width=1000, height=400)
+            st.dataframe(df_rec_f.sort_values("n", ascending=False), width="stretch", height=400)
 
     with tab_pick:
         if df_pick_f.empty:
             st.caption("No entries for this status at this minute (after filter).")
         else:
-            st.dataframe(df_pick_f.sort_values("n", ascending=False), width=1000, height=400)
+            st.dataframe(df_pick_f.sort_values("n", ascending=False), width="stretch", height=400)
 
 
 
@@ -383,6 +382,6 @@ if has_desc:
 
 st.dataframe(
     df_t[show_cols].sort_values(["day_offset", "time_hhmm"]),
-    width='content',
+    width="stretch",
     height=420
 )
