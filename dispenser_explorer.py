@@ -8,8 +8,8 @@ from heapq import heappush, heappop
 # =========================
 # Config
 # =========================
-EVENTS_PATH = "../output_term/charging_event_record_test.csv"
-DISPENSERS_PATH = "../output_term/dispensers_needed_by_candidate.csv"
+EVENTS_PATH = "output_term/charging_event_record_test.csv"
+DISPENSERS_PATH = "output_term/dispensers_needed_by_candidate.csv"
 
 MIN_SESSION_MINUTES = 0 
 BASE_DAY = pd.Timestamp("2025-09-15") 
