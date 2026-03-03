@@ -52,7 +52,7 @@ SERVICE_MAP = {1: "MF", 2: "Sat", 3: "Sun"}
 DROP_SEC = 90
 PICK_SEC = 90
 DEADHEAD_DIST_M = 500
-ARRIVE_BEFORE_DEP_SEC = int(6.5 * 60)  # 390
+ARRIVE_BEFORE_DEP_SEC = int(7 * 60)  # 390
 RECOVERY_SEC = 5 * 60                  # 300
 
 
