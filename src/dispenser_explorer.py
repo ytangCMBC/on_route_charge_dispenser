@@ -5,11 +5,15 @@ import streamlit as st
 import plotly.express as px
 from heapq import heappush, heappop
 
-# =========================
-# Config
-# =========================
-EVENTS_PATH = "../data/charging_event_record_test.csv"
-DISPENSERS_PATH = "../data/dispensers_needed_by_candidate.csv"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent   
+REPO_DIR = BASE_DIR.parent                 
+DATA_DIR = REPO_DIR / "data"
+
+EVENTS_PATH = DATA_DIR / "charging_event_record_test.csv"
+DISPENSERS_PATH = DATA_DIR / "dispensers_needed_by_candidate.csv"
+
 
 MIN_SESSION_MINUTES = 0 
 BASE_DAY = pd.Timestamp("2025-09-15") 
